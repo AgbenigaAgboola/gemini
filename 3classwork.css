@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700,900');
+* {
+box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: 'raleway', sans-serif;
+    text-align: center
+}
+/*header======*/
+header {
+    margin-top: 1em;
+}
+nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+nav li{
+    display: inline-block;
+    margin: 1em;
+}
+nav a{
+    font-weight: 900;
+    text-decoration: none;
+    font-size: .8rem;
+    padding: .5em;
+    background: lightgreen;
+}
+/*home-hero======*/
+.title {
+   background-image: url("gemini/img/hero.jpg"); 
+   padding: 0em 0;
+
+}
