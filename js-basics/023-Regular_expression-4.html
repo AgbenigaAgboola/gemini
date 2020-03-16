@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Regular Expression in JS 2</title>
+    <script>
+        /*Email address Validation
+         \d - match any digit (equal to [0-9])
+         \w - match any word character (a-z, A-Z, 0-9 & _)
+         \S - MATCH WHITESPACE CHARACTER (EG - SPACES & TABS)
+         \T - MATCH A TAB ONLY         
+        */
+       function validate(){
+           var username = document.getElementById("username").value;
+
+           var regx = /^([a-zA-Z0-9\.-]+)@([a-zA-Z0-9-]+).([a-z]{2,8})(.[a-z]{2,8})?$/; //adding questio
+           if(regx.test(username)){
+            //    alert("Valid Username");
+               document.getElementById("bluser").style.visibility = "visible";
+               document.getElementById("bluser").innerHTML = "Valid Email";
+               document.getElementById("bluser").style.color = "green";
+           }else{
+            //    alert("Invalid Username");
+               document.getElementById("bluser").style.visibility = "visible";
+               document.getElementById("bluser").innerHTML = "Invalid Email";
+               document.getElementById("bluser").style.color = "red";
+           }
+
+       }
+
+    </script>
+</head>
+<body>
+    <form action="message.html">
+<input type="text" id="username" placeholder="Email">
+<label id="bluser" style="color:red; visibility: hidden;">Invalid Email</label><br><br>
+<button onclick="validate()" type="button">Submit</button>
+
+    </form>
+    
+</body>
+</html>

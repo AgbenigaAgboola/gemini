@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dom Manipulation</title>
+    <script>
+function fn1(){
+    var username = document.getElementById("username1").value;
+    var password = document.getElementById("password1").value;
+    if(username == password){
+        alert("Password and Username is a Match");
+    }else{ 
+        alert("Password and Username does not match")
+    }
+    
+}
+    </script>
+</head>
+<body>
+    <input id="username1" type="text" placeholder="Enter Username">
+    <br>
+    <input type="password" placeholder="Input your Password" id="password1">
+<br>
+    <button onclick="fn1()" id ="btn1">Click me</button>
+</body>
+</html>
