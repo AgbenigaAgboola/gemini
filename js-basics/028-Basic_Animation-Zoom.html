@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Basic Animations Part 2 - scaling</title>
+    <script>
+    var width=100;
+    var difference=2;
+    var intervalID = 0;
+    // document.getElementById("img1").style.width=width;
+
+    function increase(){
+        // alert("am working");
+        clearInterval(intervalID);
+       intervalID = setInterval(expand,20);
+    }
+    function expand(){
+        if(width<200){
+            width = width+difference;
+            var n = width.toString() +"px";
+            console.log(n)
+            document.getElementById("img1").style.width=n;
+            console.log(width);
+        }else{
+            clearInterval(intervalID);
+        }
+    }
+    function decrease(){
+        clearInterval(intervalID);
+        intervalID = setInterval(shrink,20);
+    }
+    function shrink(){
+        if(width>100){
+            width = width-difference;
+            var n = width.toString() +"px";
+            console.log(n)
+            document.getElementById("img1").style.width=n;
+            console.log(width);
+        }else{
+            clearInterval(intervalID);
+        }
+    }
+
+    </script>
+</head>
+<body>
+    <br><br>
+    <img  onmouseover="increase()" onmouseout="decrease()" id="img1" src="images/Oriii.png" width="100px">
+    
+</body>
+</html>
